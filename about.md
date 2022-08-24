@@ -35,11 +35,17 @@ The communication between our web socket interface and Arduino port happens thro
 ## Launching Application 
 
 1.Upload sketch on Arduino board.
+
 2.Using the Terminal start your Node.js app using `node app.js`.
+
 3.Open up a browser and enter the URL `http://localhost:3000/`.
+
 4.The interface and the buttons are self explainatory.
+
 5.The values must be strings or the alerts will force you to write in proper format.
+
 6.Check connections properly and the time limits are max 5 mins for a color.
+
 7.For connections you can refer to the Tinckercad Circuit Diagram and for software code understanding you can always serach and understand the functions but the function names are self explainatory.
 
 ## Some useful links
