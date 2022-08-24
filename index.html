@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-LED</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Exo+2:ital,wght@0,300;1,300;1,400&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Comfortaa:wght@300&family=Exo+2:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+        </script>
+
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Alert!</strong> You should check your internet connection and all the wirings :).
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <hr>
+
+    <div id="d1">
+        <h2 id="head1"><b>Turn on/off your LED Strip</b> </h2>
+        <button id="b1" type="button" class="btn btn-outline-success">Turn On</button>
+        <button id="b2" type="button" class="btn btn-outline-danger">Turn Off</button>
+    </div>
+     
+
+
+
+    <hr>
+
+    <div id="d2">
+        <h2 id="h2"><b>Customize your Color Patterns</b> </h2>
+        <label id="l1" for="red">Amount of Red Color</label>
+        <input type="string" name="shades" id="numinr" max="255" min="0" step="1" placeholder="0-255 (eg:r137)">
+        <button id="b3" type="button" class="btn btn-light">Submit</button>
+
+        <label id="l6" for="redt">Time for which LED Strip will glow RED </label>
+        <input type="number" name="timered" id="tr" placeholder="in secs eg:(tr10)">
+        <button id="b7" type="button" class="btn btn-light">Submit</button>
+
+        <br>
+
+
+        <label id="l2" for="green">Amount of Green Color</label>
+        <input type="string" name="shades" id="numing" max="255" min="0" step="1" placeholder="0-255 (eg:g137)">
+        <button id="b4" type="button" class="btn btn-light" placeholder="0-255 ">Submit</button>
+
+        <label id="l3" for="greent">Time for which LED Strip will glow GREEN </label>
+        <input type="number" name="timegreen" id="tg" placeholder="in secs eg:(tg10)">
+        <button id="b8" type="button" class="btn btn-light">Submit</button>
+
+        <br>
+        <label id="l4" for="blue">Amount of Blue Color</label>
+        <input type="string" name="shades" id="numinb" max="255" min="0" step="1" placeholder="0-255 (eg:b137)">
+        <button id="b5" type="button" class="btn btn-light" placeholder="0-255 ">Submit</button>
+
+        <label id="l5" for="bluet">Time for which LED Strip will glow BLUE </label>
+        <input type="number" name="timeblue" id="tb" placeholder="in secs (eg:tb10)">
+        <button id="b9" type="button" class="btn btn-light">Submit</button>
+    </div>
+
+    <br>
+
+    <div id="d3">
+        <h2 id="h3"><b>Set time interval of this pattern to repeat</b> </h2>
+        <input type="number" name="secs" id="time" max="300" min="1" step="1" placeholder="eg(tt10)">
+        <button id="b6" type="button" class="btn btn-light">Submit</button>
+    </div>
+    <hr>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img id="i1" src="https://hackster.imgix.net/uploads/attachments/1008766/1138-00_Y0tDbEsN26.jpg?auto=compress%2Cformat&w=900&h=675&fit=min" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img id="i2" src="https://poster.keepcalmandposters.com/1182063.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    
+
+    <script>
+        var socket = io();
+
+        document.getElementById('b1').onclick = function () {
+            socket.emit('lights', { "status": "1" });
+            alert('LED Turned On');
+        };
+        document.getElementById('b2').onclick = function () {
+            socket.emit('lights', { "status": "0" });
+            alert('LED Turned Off');
+        };
+
+        document.getElementById('b3').onclick = function () {
+            let rgb_val1 = document.getElementById("numinr").value;
+            if(typeof rgb_val1==string && rgb_val1.startsWith("r")){
+            socket.emit('shade1', { "rgbval1": rgb_val1 });}
+            else{
+                alert('Input according to given example')
+            }
+        };
+
+        document.getElementById('b4').onclick = function () {
+            let rgb_val2 = document.getElementById("numing").value;
+            if(typeof rgb_val2==string && rgb_val2.startsWith("g")){
+            socket.emit('shade2', { "rgbval2": rgb_val2 });}
+            else{
+                alert('Input according to given example')
+            }
+        };
+
+        document.getElementById('b5').onclick = function () {
+            let rgb_val3 = document.getElementById("numinb").value;
+            if(typeof rgb_val3==string && rgb_val3.startsWith("b")){
+            socket.emit('shade3', { "rgbval3": rgb_val3 });}
+            else{
+                alert('Input according to given example')
+            }
+        };
+
+        document.getElementById('b7').onclick = function () {
+            let taim1 = document.getElementById("tr").value;
+            socket.emit('timer', { "time_red": tmr });
+        };
+
+        document.getElementById('b8').onclick = function () {
+            let taim2 = document.getElementById("tg").value;
+            socket.emit('timeg', { "time_green": tmg });
+        };
+
+        document.getElementById('b9').onclick = function () {
+            let taim = document.getElementById("tb").value;
+            socket.emit('timeb', { "time_blue": tmb });
+        };
+
+        document.getElementById('b6').onclick = function () {
+            let taim = document.getElementById("time").value;
+            socket.emit('shadetime', { "time_interval": taim });
+        };
+    </script>
+
+
+</body>
+
+</html>
