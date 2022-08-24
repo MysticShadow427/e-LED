@@ -1,0 +1,41 @@
+body{
+    background-image:url(w.jpg);
+    background-color: aliceblue;
+}
+#head1{
+    font-family: 'Exo 2', sans-serif;
+}
+
+#h2{
+    font-family: 'Exo 2', sans-serif;
+}
+
+#h3{
+    font-family: 'Exo 2', sans-serif;
+}
+
+#numinr,#numing,#numinb,#tr,#tg,#tb,#time{
+    font-family: 'Comfortaa', cursive;
+}
+
+#l1,#l2,#l3,#l4,#l5,#l6{
+    font-family: 'ABeeZee', sans-serif;
+}
+
+#i1,#i2{
+ padding: auto;
+}
+
+#d2{
+    background-color: blanchedalmond;
+    color: chocolate;
+}
+
+#d1{
+    background-color:darkkhaki;
+    color:maroon;
+}
+#d3{
+    background-color:lightsalmon;
+    color:brown;
+}
