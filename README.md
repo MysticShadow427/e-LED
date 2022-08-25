@@ -13,8 +13,8 @@ THe main interface between webpage and Arduino is handled by Node-js.It helps to
 <b>Software Used</b>-C++ for handling Arduino and <i>NeoPixel Adafruit Library</i> and its functions,which is specially used for controlling the LED Strip.
 HTML,CSS and JavaScript to build our webpage and also some Bootstrap components. Node.js for providing the web interface between these two.Node-js packages used-<i>SerialPort npm</i> package,<i>Serialport.io</i>.
 
-I am working on the webpage,mainly on the CSS styling and designing part.Also planning to add some more options to user to make more attractive and colorful RGB patterns.More info about using the project for a user in given [here](https://github.com/MysticShadow427/e-LED/blob/main/about.md).
+I am working on the webpage,mainly on the CSS styling and designing part.Also planning to add some more options for user to make more attractive and colorful RGB patterns.More info about using the project for a user in given [here](https://github.com/MysticShadow427/e-LED/blob/main/about.md).
 
-Thank You and get blinded by the lights :)
+ Get blinded by the lights :)
 
 ![enter image description here](https://i.pinimg.com/originals/89/36/18/893618ef1059a4c45ad9d242f5f0c3c5.gif)
