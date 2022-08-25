@@ -31,6 +31,8 @@ Or you can find the name in [Arduino Create](https://create.arduino.cc/editor) i
 
 The communication between our web socket interface and Arduino port happens through Serial Communication Protocol through transfer of strings.
 
+You need to give an external supply of 5V to Arduino.
+
 
 ## Launching Application 
 
